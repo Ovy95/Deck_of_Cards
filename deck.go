@@ -13,7 +13,7 @@ func newDeck() deck {
 	cardValues := []string{"Ace", "Two", "Three", "Four"}
 	// Underscores are used when we dont want to use
 	// a variable
-	for i, suits := range cardSuits {
+	for _, suits := range cardSuits {
 		for _, values := range cardValues {
 			cards = append(cards, values+" of "+suits)
 		}
@@ -28,4 +28,9 @@ func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i, card)
 	}
+}
+
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+
 }
