@@ -4,8 +4,23 @@ import "fmt"
 
 // Create a new type of 'deck'
 // which is a slice of strings
-
 type deck []string
+
+func newDeck() deck {
+	cards := deck{}
+
+	cardSuits := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
+	cardValues := []string{"Ace", "Two", "Three", "Four"}
+	// Underscores are used when we dont want to use
+	// a variable
+	for i, suits := range cardSuits {
+		for _, values := range cardValues {
+			cards = append(cards, values+" of "+suits)
+		}
+
+	}
+	return cards
+}
 
 // d can be anything
 func (d deck) print() {
