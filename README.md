@@ -8,17 +8,11 @@ Features
 - save the deck as a file
 - load the deck file
 
-<br>
-Some simply tests were also added to check amount of cards.
-<br>
-## Simply following a Udemy course to get the basics
-
 Topics covered 
-
-Imports
-Custom types 
-Functions
-Receiver functions
-Saving files 
-Loading saved files
-Testing in Go 
+- Imports
+- Custom types 
+- Functions
+- Receiver functions
+- Saving files 
+- Loading saved files
+- Testing in Go 
